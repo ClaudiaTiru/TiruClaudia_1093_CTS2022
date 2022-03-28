@@ -1,0 +1,18 @@
+GANG OF FOUR - carte cu design pattern
+
+obiect unic/ instanta unica = design pattern singleton
+Familie de clase  = design pattern factory
+
+
+Cerinta 1) design pattern factory
+
+Companie de transport STB
+Trb implementat un modul in care sa se creeze obiecte de tip MijLocTransport: Autobuz, Tramvai, Troleibuz.
+Modulul trb sa ajute la crearea de obiecte din familia de clase MijlocTransport
+Tipurile de transport sunt salvate intr-un enum{Autobuz, Tramvai, Troleibuz}.
+
+
+
+  ---> pt a determina daca mijlocTRansport e cls abstracta sau interfata:
+  - interfete pot fi implementate mai multe
+  - cls abstracta e extinsa una singura; dar putem avea atribute si met implementate
