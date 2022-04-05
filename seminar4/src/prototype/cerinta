@@ -1,0 +1,5 @@
+ Pentru crearea de obiecte de tip Autobuz sunt consumate foarte multe resurse. Din acest motiv trebuie propusa o
+ varianta prin care daca exista deja un obiect creat, sa fie folosit acest obiect pentru viitoarele obiecte, fara
+ a mai fi nevoie de crearea de la 0 a obiectelor de tip Autobuz.
+
+Aceeasi regula se va aplica si pentru alte tipuri de mijloace de transport.
