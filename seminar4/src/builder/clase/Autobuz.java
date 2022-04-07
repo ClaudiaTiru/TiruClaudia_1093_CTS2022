@@ -6,45 +6,43 @@ public class Autobuz {
     private String numarLinie;
     private Boolean openDoors;
     private Boolean oprireCapatLinie;
-    private String textDerulat;
-    private Integer numarLocuri;
+    private String textulDerulat;
+    private int numarLocuri;
 
-    public Autobuz() {
+    Autobuz() {
         this.numeSofer = "Doru";
-        this.numarInmatriculare = "B-123-ACC";
-        this.numarLinie = "45";
-        this.openDoors = true;
-        this.oprireCapatLinie = true;
-        this.textDerulat ="text derulat";
-        this.numarLocuri = 54;
+        this.numarInmatriculare = "b12345";
+        this.numarLinie = "54";
+        this.openDoors = Boolean.TRUE;
+        this.oprireCapatLinie = Boolean.TRUE;
+        this.textulDerulat = "textul derulat";
+        this.numarLocuri = 20;
     }
 
-    //versiunea care nu mai permite sa modifici un atribut o data setat
-     void setNumeSofer(String numeSofer) {
+    void setNumeSofer(String numeSofer) {
         this.numeSofer = numeSofer;
     }
 
-     void setNumarInmatriculare(String numarInmatriculare) {
+    void setNumarInmatriculare(String numarInmatriculare) {
         this.numarInmatriculare = numarInmatriculare;
     }
 
-     void setNumarLinie(String numarLinie) {
+    void setNumarLinie(String numarLinie) {
         this.numarLinie = numarLinie;
     }
 
-     void setOpenDoors(Boolean openDoors) {
+    void setOpenDoors(Boolean openDoors) {
         this.openDoors = openDoors;
     }
 
-     void setOprireCapatLinie(Boolean oprireCapatLinie) {
+    void setOprireCapatLinie(Boolean oprireCapatLinie) {
         this.oprireCapatLinie = oprireCapatLinie;
     }
-
-    void setTextDerulat(String textDerulat) {
-        this.textDerulat = textDerulat;
+    void setTextulDerulat(String textulDerulat) {
+        this.textulDerulat = textulDerulat;
     }
 
-     void setNumarLocuri(Integer numarLocuri) {
+    void setNumarLocuri(int numarLocuri) {
         this.numarLocuri = numarLocuri;
     }
 
@@ -56,7 +54,7 @@ public class Autobuz {
                 ", numarLinie='" + numarLinie + '\'' +
                 ", openDoors=" + openDoors +
                 ", oprireCapatLinie=" + oprireCapatLinie +
-                ", textDerulat='" + textDerulat + '\'' +
+                ", textulDerulat='" + textulDerulat + '\'' +
                 ", numarLocuri=" + numarLocuri +
                 '}';
     }

@@ -1,10 +1,9 @@
 package prototype.clase;
 
-public class Autobuz implements MijlocTransportPrototype {
+public class Autobuz implements MijlocTransport{
     private String numeSofer;
 
     public Autobuz(String numeSofer) {
-        super();
         this.numeSofer = numeSofer;
     }
 
@@ -13,15 +12,14 @@ public class Autobuz implements MijlocTransportPrototype {
     }
 
     @Override
+    public MijlocTransport copiaza() throws CloneNotSupportedException {
+        return (MijlocTransport) super.clone();
+    }
+
+    @Override
     public String toString() {
         return "Autobuz{" +
                 "numeSofer='" + numeSofer + '\'' +
                 '}';
-    }
-
-
-    @Override
-    public MijlocTransportPrototype copiaza() throws CloneNotSupportedException {
-        return (MijlocTransportPrototype) super.clone();
     }
 }
