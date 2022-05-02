@@ -1,0 +1,69 @@
+Trebuie implementat un modul care sa ii spuna calatorului ce mijloc de transport trebuie sa foloseasca
+in functie de distanta pe care o are de parcurs. Astfel, daca un calator are de parcurs o distanta mai mica de 3 km,
+ este recomandat sa mearga cu Troleibuzul. Daca are o distanta cuprinsa intre 3 si 5 km i se recomanda sa
+ foloseasca autobuzul, iar daca are o distanta mai mare de 5 km, dar mai mica decat 10,  i se recomanda sa
+ foloseasca Tramvaiul. In cazul in care distanta este mai mare decat 10 km i se recomanda sa foloseasca Metroul.
+
+Sa se implementeze acest modul in cadrul aplicatiei.
+
+CHAIN OF RESPONSABILITY
+
+Participanti:
+Handler Notificator clasa abstractă sau interfață care definește
+interfața obiectelor ce vor gestiona cererea de procesare și de rezolvare
+a problemei.
+
+ConcreteHandler NotificatorSMS , NotificatorEmail , NotificatorManager
+clasele concerete ale căror obiecte vor forma lanțul.
+
+
+
+13.  Pentru fiecare Autobuz se solicita salvarea acestora in memorie pentru posibilitatea de a reveni la o
+forma anterioara a obiectului respectiv. Se doreste implementarea unui modul care sa asigure aceasta salvare cu
+consum optim de memorie in conditiile in care este cunoscut faptul ca atributele care se vor modifica cu o frecventa
+mai mare sunt cele legate de soferul care il conduce, consumul mediu, etc. Celelalte atribute precum model, an fabricatie,
+ numar locuri nu se vor modifca frecvent.
+
+MEMENTO
+
+Memento --------> MementoTransport
+                -consum mediu, sofer, model, an fabricatie, numar locuri
+
+Care Taker -----> ManagerTransport
+                - list< MementoTransport>
+                - adaugareMemento
+                - getMemento
+                - getLastMemento
+
+ Originator -----> Transport
+                    -consum mediu, sofer
+                    -model, an fabricatie, numar locuri
+
+14. Un tramvai circula de fiecare data pe aceeasi linie, astfel el are de parcurs confom unui patern bine
+stabilit statiile de pe acea linie: Statia1, Statia2, Statia3, Statia4, Statia5, Statia6 atunci cand merge
+intr-un sens si invers atunci cand parcurge traseul in sens invers.
+
+Sa se implementeze modului care asigura oprirea in statiile stabilite de catre patern pentru Tramvai.
+
+TEMPLATE METHOD
+
+15. Se doreste implementarea unui modul care sa gestioneze autobuzele din cadrul flotei in functie de starea
+in care se afla fiecare autobuz. Starile posibile sunt: InCursa, LaCapatDeLinie, LaReparat.
+
+Un autobuz care se afla la capat de linie poate sa plece in cursa, insa un autobuz care este in cursa nu poate
+ sa plece in cursa. Va putea pleca in cursa doar dupa ce ajunge la capat de linie. De asemneea un autobuz care
+ este la reparat va putea s aplece in cursa doar dupa ce este reparat. Un autobuz care nu este in cursa nu are
+ cum sa ajunga la capat de linie.
+
+Modulul implementat trebuie sa tina cont de toate aceste conditii.
+
+STATE
+
+16. In cadrul unei autobaze este ceruta implementarea unui modul software prin care operatorul sa poata solicita
+plecarile pentru fiecare autobuz de la capat de linie pe ce linie va merge (numarul liinie). Comenzile de plecare
+pe o anumita linie vor fi salvate intr-o colectie, iar in momentul in care autobuzl este disponibil acesta va
+ prelua comanda de plecare in traseu.
+
+Operatorul are posibilitatea sa stabileasca plecarile de la prima ora a zilei, astfel nu mai este necesara
+interventia acestuia pe timpul zilei.
+
