@@ -1,0 +1,4 @@
+ stub - dam valori hardcodate, ne folosim de metode specifice cls aleia, sunt standard, daca vr un obiect varsta 45 faci un stub, altu cu varsta 65 etc.
+ fake -  fake-uieste detaliile, doar pt cele care sunt returnate
+ dummy - nu ne folosim de met specifice clasei aleia
+ spy - contorizeaza nr de apeluri
