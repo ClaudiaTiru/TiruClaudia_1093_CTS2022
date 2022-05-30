@@ -16,12 +16,12 @@ public class PachetTuristic {
     }
 
     public boolean poateRezerva() {
-        return client.getVarsta() > 18;
+        return client.getVarsta() >= 18;
     }
 
     public void aplicaDiscountVarstnici(int procent) {
         if (this.client.getVarsta() >= 65) {
-            this.pret = this.pret - (procent / 100);
+            this.pret = this.pret - ((double)procent / 100) * pret;
         }
     }
 

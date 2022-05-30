@@ -2,7 +2,9 @@ package testare.teste;
 
 import clase.agentie.AgentieTurism;
 import clase.agentie.IPachetTuristic;
+
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import testare.dubluri.PachetFake;
 import testare.dubluri.PachetTuristicDummy;
 
@@ -11,6 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class AgentieTurismTest {
 
     @Test
+    @Category(TesteCuDummy.class)
     public void testAdaugaPachet(){
         AgentieTurism agentieTurism=new AgentieTurism();
         IPachetTuristic pachetDummy= new PachetTuristicDummy();
@@ -21,6 +24,7 @@ public class AgentieTurismTest {
     }
 
     @Test
+    @Category(TesteCuFake.class)
     public void testCalculareSumaTotalaPachete(){
         AgentieTurism agentieTurism = new AgentieTurism();
         PachetFake pachetFake = new PachetFake();
